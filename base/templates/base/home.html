@@ -2,12 +2,13 @@
 
 <h1>Home Page</h1>
 <div>
+{% comment %}   
   {% for room in rooms %}
 
   <div>
     <h5>{{room.id}} -- <a href = "{% url 'king' room.id %}" target="_self">{{room.name}}</a></h5>
     {% comment %} to make the url dynamic  the id is for the room  {% endcomment %}
-  </div>
-  {% endfor %}
+  {% comment %} </div>
+  {% endfor %} {% endcomment %}
 </div>
 {% endblock content %}
